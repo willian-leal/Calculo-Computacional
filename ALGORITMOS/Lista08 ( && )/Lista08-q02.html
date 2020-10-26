@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista08-q02</title>
+</head>
+<body>
+    
+    <input placeholder="informe a temperatura ambiente" id="temp_amb">
+    <button onclick="medir()">Medir conforto</button>
+</body>
+</html>
+<script>
+
+    function medir(){
+        if(temp_amb.value >=22 && temp_amb.value <=23){
+            alert('Temperatura confortável')
+        }
+        else{
+            alert('Temperatura não está confortável')
+        }
+    }
+
+</script>

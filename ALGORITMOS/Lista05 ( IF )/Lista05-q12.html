@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista05-q12</title>
+</head>
+<body>
+    
+<input placeholder="informe um ano" id="ano">
+<button onclick="analisar()">Ver fato</button>
+<div id="div_resultado"></div>
+
+</body>
+</html>
+<script>
+
+function analisar(){
+
+    var ano_informado = Number(ano.value);
+    
+    if(ano_informado == 1965){
+        div_resultado.innerHTML='No ano de 1965 o email estava sendo criado';
+    }
+    if(ano_informado > 1965){
+        div_resultado.innerHTML=`No ano ${ano_informado} o email já havia sido criado`;
+    }
+    if(ano_informado > 1969){
+        div_resultado.innerHTML=`No ano ${ano_informado} o email já havia sido aprimorado - Poderia ser enviado para outro computador`;
+    }
+    if(ano_informado < 1965){
+        div_resultado.innerHTML=`No ano ${ano_informado} o email nem havia sido criado ainda`;
+    }
+}
+
+</script>

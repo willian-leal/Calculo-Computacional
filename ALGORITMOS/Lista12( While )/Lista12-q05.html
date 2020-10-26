@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input placeholder="Quantos números quer sortear" id="quant">
+
+    <button onclick="sorteio()">Sortear números</button>
+    <div id="div_resultado"></div>
+
+</body>
+
+</html>
+<script>
+
+    function sorteio() {
+        contador = 0;
+
+        while (contador < quant.value) {
+            numero = parseInt(Math.random() * 100) + 1;
+            div_resultado.innerHTML += `${numero}<br>`;
+            contador++;
+        }
+    }
+
+</script>

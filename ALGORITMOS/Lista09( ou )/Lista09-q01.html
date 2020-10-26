@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista09-q01</title>
+</head>
+<body>
+    
+    <input placeholder="informe sua renda individual" id="renda_individual">
+    <input placeholder="informe sua renda familiar" id="renda_familiar">
+    <button onclick="verificar()">Terei o beneficio</button>
+
+</body>
+</html>
+<script>
+
+    function verificar(){
+        if( renda_individual.value <= 2000 || renda_familiar.value <= 3000){
+        alert('Você terá direito ao auxílio');
+        
+    }
+    else{
+        alert('Sem direito ao auxílio');
+    }
+    }
+</script>

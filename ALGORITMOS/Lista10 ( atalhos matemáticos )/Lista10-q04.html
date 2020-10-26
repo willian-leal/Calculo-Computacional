@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista10-q04</title>
+</head>
+<body>
+    
+    Números : <b id="b_cliques">0</b>
+    <button onclick="clicar()">Quero um cabalistíco</button><br>
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+<script>
+var cliques = 0;
+
+function clicar() {
+
+    // primeiro usa o valor atual, depois aumenta em 1
+    cliques = parseInt(Math.random() * 145)
+    if (cliques == 3 || cliques == 4 || cliques == 7 || cliques == 10 || cliques == 12 || cliques == 144) {
+        div_resultado.innerHTML = 'Eu S2 números cabalísticos';
+        b_cliques.innerHTML = cliques;
+    }
+    else{
+        div_resultado.innerHTML = 'Ah, me dá um número bom na próxima!'
+        b_cliques.innerHTML = cliques;
+}
+}
+
+</script>

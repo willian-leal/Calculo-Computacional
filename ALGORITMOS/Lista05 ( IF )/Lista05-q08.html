@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista05-q08</title>
+</head>
+<body>
+    
+<input placeholder="Informe o saldo da conta" id="saldo">
+
+<input placeholder="Informe o valor do débito" id="debito">
+
+<button onclick="calcular()">Analisar conta</button>
+<br>
+<div id="div_resultado" style="display: none"></div>
+<p id="complemento" style="color:red; display: none"></p>
+
+</body>
+</html>
+<script>
+
+function calcular(){
+    
+    div_resultado.style.display='none'
+    complemento.style.display='none'
+    
+    var novo_saldo = Number(saldo.value) - Number(debito.value);
+    
+    if(novo_saldo == 0){
+        complemento.innerHTML = `<b>O saldo atual da conta corrente é ${novo_saldo.toFixed(2)}</b>`;
+        complemento.style.display='block'
+    }
+    
+    if(novo_saldo > 0){
+        div_resultado.innerHTML = `O saldo atual da conta corrente é ${novo_saldo.toFixed(2)}`;
+        div_resultado.style.display='block'
+    }
+    
+}
+</script>

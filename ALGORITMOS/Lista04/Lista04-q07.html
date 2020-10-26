@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista04-q07</title>
+</head>
+<body>
+    <input placeholder="1°Número" id="primeiro">
+    <input placeholder="Razão" id="razao">
+    <input placeholder="Termo" id="termo">
+    <button onclick="calcular()" >Calcular PG</button>
+    <div id="div_resultado"></div>
+    
+</body>
+</html>
+<script>
+    function calcular(){
+        var n = Number(primeiro.value);
+        var nn = Number(razao.value);
+        var nnn = Number(termo.value);
+        var pg = n*(nn**(nnn-1));
+        div_resultado.innerHTML = pg;
+    }
+</script>

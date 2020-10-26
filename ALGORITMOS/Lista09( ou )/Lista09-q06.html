@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista09-q06</title>
+</head>
+<body>
+    
+    <select id="tipo_arroz">
+        <option value="branco">Arroz branco</option>
+        <option value="integral">Arroz integral</option>
+    </select>
+    <br>
+    <input placeholder="Tempo de cozimento" id="tempo">
+    <input placeholder="Quantidade de sal (gramas)" id="sal">
+    <button onclick="verificar()">Avaliar arroz</button><br>
+    <div id="div_resultado"></div>
+    <img id="img_resultado" style="height: 300px;">
+
+</body>
+</html>
+<script>
+    var arroz = tipo_arroz.value;
+
+    function verificar(){
+        if(arroz == 'branco' && tempo.value == 10 && (sal.value >0 || sal.value == 10)){
+            div_resultado.innerHTML =`Arroz perfeito`;
+            img_resultado.src = 'arroz.jpeg';
+        }
+        else{
+            div_resultado.innerHTML = `Seu arroz não está perfeito`
+            img_resultado.src = 'bravo.jpeg';
+        }
+    }
+
+</script>

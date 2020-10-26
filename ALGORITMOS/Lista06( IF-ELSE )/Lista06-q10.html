@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista06-q10</title>
+</head>
+<body>
+    
+<input placeholder="Quantidade de partidas" id="partidas">
+<input placeholder="Quantidade de gols" id="gols">
+
+<button onclick="validar()">Estudar atacante</button>
+
+<div id="div_bom" style="display: none"></div>
+<div id="div_comum" style="display: none"></div>
+<div id="div_ruim" style="display: none" ></div>
+
+
+</body>
+</html>
+<script>
+    
+    function validar(){
+        
+        div_bom.style.display = 'none';
+        div_comum.style.display = 'none';
+        div_ruim.style.display = 'none';
+        div_bom.innerHTML = ``;
+        div_comum.innerHTML = ``;
+        div_ruim.innerHTML = ``;
+
+        
+        var media_gols = Number(gols.value) / Number(partidas.value);
+        
+        if( media_gols < 0.2){
+        div_bom.style.display = 'none';
+        div_comum.style.display = 'none';
+        div_ruim.style.display = 'block';
+        div_ruim.innerHTML = `Melhor mudar de posiçãoe <br><img style="right: 380px; width: 380px" src="fred.jpeg" alt=""><br><b>Sua média de gols/partida é de ${media_gols.toFixed(1)}</b>`;
+        }
+        
+        else{
+           
+            if( media_gols > 0.6){
+            div_bom.style.display = 'block';
+            div_comum.style.display = 'none';
+            div_ruim.style.display = 'none';
+            div_bom.innerHTML = `Atacante de futuro <br><img style="right: 380px; width: 380px" src="papaicris.jpeg" ><br><b>Sua média de gols/partida é de ${media_gols.toFixed(1)}</b>`;
+            } 
+            
+            else{               
+                div_bom.style.display = 'none';
+                div_comum.style.display = 'block';
+                div_ruim.style.display = 'none';
+                div_comum.innerHTML =`Atacante mediano <br><img style="right: 380px; width: 380px" src="dybala.jpeg"><br><b>Sua média de gols/partida é de ${media_gols.toFixed(1)}</b>`;
+            }
+        }
+
+    }
+</script>

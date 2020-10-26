@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista boolean - q01</title>
+</head>
+<body>
+    
+    <input placeholder="Sua altura" id="altura"> <br>
+    
+    <button onclick="analisar()">Analisar para esportes</button>
+
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function analisar() {
+
+        // variáveis booleanas
+        var piloto = altura.value  < '1.60';
+        var velejador = altura.value  < '1.60';
+        var jogador = altura.value > '1.60' && altura.value <='1.85';
+
+        var frase = '';
+
+        if (piloto && velejador) {
+        frase = 'Pode tentar ser piloto(a) de corrida<br>Pode tentar ser velejador(a)';
+            
+        }  else if(jogador){
+            frase = 'Pode tentar ser jogador de futebol ou handbol';
+        }
+
+        resultado.innerHTML = frase;
+    }
+</script>

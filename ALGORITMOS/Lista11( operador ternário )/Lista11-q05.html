@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input placeholder="Informe a 1° nota" id="nota1">
+    <input placeholder="Informe a 2° nota" id="nota2">
+    <button onclick="verificar()">Verificar nota</button>
+    <div id="div_resultado"></div>
+</body>
+</html>
+<script>
+
+    function verificar(){
+        var n1 = Number(nota1.value);
+        var n2 = Number(nota2.value);
+        var m = (n1 + n2)/2;
+        div_resultado.innerHTML = m <6 ? 'Infelizmente reprovado' : m < 7.5 ? 'Aprovado-Automação, Seg ou Tsetes' : 'Aprovado-dev';
+    }
+
+</script>

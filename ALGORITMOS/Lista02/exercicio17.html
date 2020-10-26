@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio17</title>
+</head>
+
+<body>
+    <h1>A História de uma pizza</h1>
+    <br>
+    <button onclick="um()">Acabou de chegar</button>
+    <button onclick="cinco()">depois de 1 minuto</button>
+    <button onclick="quinze()">depois de 5 minuto</button>
+    <button onclick="vazio()">depois de 15 minuto</button>
+    <br>
+    <img style="width: 500px;" src="" id="imagem">
+
+</body>
+
+</html>
+<script>
+    function um() {
+        imagem.src = 'inteira.jfif';
+    }
+    function cinco() {
+        imagem.src = 'faltando.jfif';
+    }
+    function quinze() {
+        imagem.src = 'metade.jpg';
+
+    }
+    function vazio() {
+        imagem.src = 'vazia.jpg';
+
+    }
+</script>

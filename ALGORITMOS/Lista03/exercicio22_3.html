@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><b>DESAFIO!</b></title>
+</head>
+<body>
+
+    <h3><b>Escolha uma Espécie</b></h3>
+<div id="div_escolha"></div>
+<select id="especie">
+    <option value="- Escolha uma Esécie-">Escolha</option>
+    <option onclick="" value="Oviparos">Ovíparos</option>
+    <option value="Maníferos">Maníferos</option>
+    </select>
+</div>
+<br>
+<br>
+<div style="display: none;" id="div_oviparos">
+    <select style="display: none;" id="ovo">
+        <option value="- Escolha um Ovíparo-">Escolha</option>
+        <option value="Galinha">Galinha</option>
+        <option value="Peixe">Peixe</option>
+        <option value="Tartaruga">Tartaruga</option>
+    </select>
+</div>
+<br>
+<br>
+<div style="display: none;" id="div_mamiferos">
+    <select style="display: none;" id="mama">
+        <option value="- Escolha um Mamífero-">Escolha</option>
+        <option value="Elefante">Elefante</option>
+        <option value="Porco">Porco</option>
+        <option value="Coelho">Coelho</option>
+</select>    
+</div>
+
+</body>
+</html>
+<script>
+
+function especie(){
+    div_escolha.innerHTML = div_oviparos;
+    div_oviparos.style.display='block';
+    
+}
+
+</script>

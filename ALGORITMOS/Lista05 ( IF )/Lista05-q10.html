@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista05-q10</title>
+</head>
+<body>
+    
+<input placeholder="Série que você assiste" id="serie"><br>
+<br>
+<input placeholder="Quantidade de eps ja assistidos" id="eps"><br>
+<br>
+<button onclick="calcular()">Verficar Nível</button><br>
+<br>
+<div id="div_resultado" style="display: none">Vejo que você gosta da série <span id="s_serie">X</span><br>
+<span id="s_gosta" style="display: none">Uau, você realmente gosta dessa série!</span></div>
+
+</body>
+</html>
+<script>
+
+function calcular(){
+
+div_resultado.style.display = 'none';
+s_gosta.style.display = 'none';
+
+var horas = (Number(eps.value) * 22) / 60;
+
+if(horas > 30){
+    div_resultado.style.display = 'block';
+    s_serie.innerHTML = `${serie.value}`;
+    s_gosta.style.display = 'block';
+}   
+if(horas <= 30){
+    div_resultado.style.display = 'block';
+    s_serie.innerHTML = `${serie.value}`;
+    s_gosta.style.display = 'none';
+}
+}
+</script>

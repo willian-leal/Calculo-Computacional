@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista09-q07</title>
+</head>
+<body>
+    
+    <input placeholder="Informe a temperatura" id="temp"><br>
+    <input placeholder="Informe a umidade do ar" id="umid"><br>
+    <button onclick="avaliar()">Avaliar clima</button>
+    <div id="div_resultado"></div>
+</body>
+</html>
+<script>
+
+    function avaliar(){
+
+        div_resultado.innerHTML = ``;
+
+        if(umid.value <0 || umid.value >100){
+            alert(`Valor de umidade inválido`);
+            div_resultado.innerHTML = ``;
+        }
+        else if(temp.value >=22 && temp.value <=23 && umid.value < 60){
+            div_resultado.innerHTML = `Clima agradável`;
+        }
+        else{
+            div_resultado.innerHTML = `Clima desconfortável`;
+        }
+    }
+
+</script>

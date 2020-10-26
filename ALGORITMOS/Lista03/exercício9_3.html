@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input autofocus placeholder="Quatos filhos você tem?" id="qtd_filho" ;>
+    <br>
+    <button onclick="calcular()">
+        calcular axilio filho
+    </button>
+
+    <div id="div_aux" style="display: none;">
+        Você tem <b id="b_filho">X</b> filhos, logo, seu "Auxílio Filhos" será de R$<b id="b_aux">Y</b>
+    </div>
+    
+</body>
+
+</html>
+<script>
+    function calcular() {
+
+        var filho = Number(filhos) * 25;
+        var filhos = qtd_filho
+        b_filho.innerHTML = filhos;
+        b_aux.innerHTML = filho;
+
+        div_aux.style.display = 'block';
+    }
+</script>

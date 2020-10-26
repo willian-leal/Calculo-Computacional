@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista04-q06</title>
+</head>
+<body>
+    <input placeholder="1°Número" id="primeiro">
+    <input placeholder="2°Número" id="segundo">
+    <button onclick="calcular()" >Calcular Raiz</button>
+    <div id="div_resultado"></div>
+    
+</body>
+</html>
+<script>
+    function calcular(){
+        var n = Number(primeiro.value);
+        var nn = Number(segundo.value);
+        var raiz = n ** (1/nn);
+        // alert(primeiro.value)
+        div_resultado.innerHTML = raiz.toFixed(2);
+    }
+</script>

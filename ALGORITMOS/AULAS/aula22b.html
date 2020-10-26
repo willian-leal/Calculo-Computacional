@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Sons dos bichos</h3>
+    <select id="bicho" onchange="som()">
+        <option value="escolha um bicho">- Escolha -</option>
+        <option value="miau!">Gatos</option>
+        <option value="au au au!">Cachorros</option>
+        <option value="muuuuu!">Vacas</option>
+    </select>
+
+</body>
+
+</html>
+<script>
+    function som() {
+        alert(bicho.value);
+    }
+</script>

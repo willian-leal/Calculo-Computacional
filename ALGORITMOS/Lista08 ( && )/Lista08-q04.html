@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista08-q04</title>
+</head>
+<body>
+    
+    <input placeholder="Seu tempo de trabalho" id="tempo">
+    <input placeholder="Kg de trigo" id="trigo">
+    <input placeholder="Quantidade de faltas" id="faltou">
+    <button onclick="verificar()">Deu match?</button>
+    <div id="div_resultado"></div>
+</body>
+</html>
+<script>
+
+    function verificar(){
+        if(tempo.value >=5 && trigo.value >=300 && faltou.value <=5){
+            div_resultado.innerHTML = 'Minha filha será sua!';
+        }
+        else{
+            div_resultado.innerHTML = 'Deu ruim! Trabalhe mais 2 anos';
+        }
+    }
+
+</script>

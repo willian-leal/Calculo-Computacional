@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="frase()">Amo o escudo do meu time</button><br>
+    <div id="div_resultado"></div>
+
+</body>
+
+</html>
+<script>
+
+    contador = 1;
+
+    function frase() {
+        while (contador < 8) {
+            div_resultado.innerHTML += '<img src="real.png">'
+            contador++;
+        }
+    }
+
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <button onclick="sorteio()">Eu S2 pares</button>
+    <div id="div_resultado"></div>
+
+</body>
+
+</html>
+<script>
+
+    function sorteio() {
+        contador = 1;
+
+        while (contador <= 100) {
+
+            contador++;
+            if (contador % 2 == 0) {
+                div_resultado.innerHTML += `${contador}<br>`;
+            }
+        }
+
+    }
+
+</script>

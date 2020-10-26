@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista 03 - questão 07</title>
+</head>
+
+<body>
+
+    <input autofocus placeholder="Nome do aluno" id="nome">
+    <br>
+    <input placeholder="Aulas totais" id="aulas">
+    <br>
+    <input placeholder="Faltas" id="faltas">
+    <br>
+
+    <button onclick="calcular()">
+        Calcular Frequência
+    </button>
+
+    <div id="div_frequencia" style="display: none; color: blue;">
+        Olá, <span id="s_nome"></span>! Sua frequência foi de
+        <span style="color:green">
+            <b id="b_frequencia"></b><b>%</b>
+        </span>
+    </div>
+    <div id="div_barra" style="background-color: maroon; height: 20px;">
+    </div>
+
+</body>
+
+</html>
+<script>
+
+    function calcular() {
+
+        var presenca = Number(aulas.value) - Number(faltas.value);
+        var frequencia = presenca / Number(aulas.value) * 100;
+        b_frequencia.innerHTML = frequencia;
+        s_nome.innerHTML = nome.value;
+        div_frequencia.style.display = 'block';
+
+        div_barra.style.width = `${frequencia}%`;
+    }
+
+</script>

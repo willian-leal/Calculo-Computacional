@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista05-q05</title>
+</head>
+<body>
+    Quantas latas de refri você toma por dia?<input id="refri">
+    <button onclick="calcular()">Quantos refri?</button>
+    <div id="div_resultado"></div>
+    <div id="div_cuidado" style="display: none; color: white; background-color: red" >Cuidado com a Diabete</div>
+</body>
+</html>
+<script>
+function calcular(){
+
+    div_cuidado.style.display='none';
+
+    var quantidade = Number(refri.value) * 365;
+
+    div_resultado.innerHTML = `Você toma ${quantidade} por ano`;
+
+    if(quantidade >=500){
+        div_cuidado.style.display='block';
+    }
+
+}
+</script>

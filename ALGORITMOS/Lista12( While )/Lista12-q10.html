@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input placeholder="De quantos em quantos idas faz musculação?" id="rotina">
+    <button onclick="verificar()">Exibir rotina mensal</button>
+    <div id="resultado"></div>
+
+</body>
+
+</html>
+<script>
+
+    function verificar() {
+        resultado.innerHTML = '';
+        var dia = Number(rotina.value);
+        var cont = 0;
+
+        while (cont < 30) {
+            if (cont % dia == 0) {
+                resultado.innerHTML += `Dia ${cont + 1} - <b>Musculação</b><br>`;
+            }
+            else {
+                resultado.innerHTML += `Dia ${cont + 1} - comer, dormir etc<br>`;
+            }
+            cont++;
+        }
+    }
+
+</script>

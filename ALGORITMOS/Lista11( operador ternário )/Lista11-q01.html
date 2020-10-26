@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista06-q01</title>
+</head>
+<body>
+    
+    <input placeholder="Digite seu nome" id="nome">
+    <input placeholder="Digite sua idade" id="idade">   
+    <button onclick="validar()">Validar Aluno</button>
+    <div id="div_resultado"></div>
+</body>
+</html>
+<script>
+    
+    div_resultado.innerHTML = '';
+    
+    function validar(){
+        var valor_idade = Number(idade.value);
+        div_resultado.innerHTML = valor_idade >=18 ? `Vamos tirar a CNH ${nome.value}?` : `Você ainda não é maior de idade ${nome.value}`;
+    }
+</script>

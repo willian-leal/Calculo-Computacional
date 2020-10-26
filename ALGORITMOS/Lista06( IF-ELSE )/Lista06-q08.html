@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista06-q08</title>
+</head>
+<body>
+    
+<input placeholder="informe a temperatura ambiente" id="temperatura">
+<button onclick="validar()">Analisar Temperatura</button>
+<div id="div_boa" style="display: none"><img src="boa.jpeg" alt=""></div>
+<div id="div_ruim" style="display: none" ><img src="ruim.jpeg" alt=""></div>
+
+
+</body>
+</html>
+<script>
+    function validar(){
+        div_boa.style.display = 'none';
+        div_ruim.style.display = 'none';
+        
+        if(temperatura.value < 10){
+        div_boa.style.display = 'block';
+        div_ruim.style.display = 'none';
+        }
+        else{
+        div_boa.style.display = 'none';
+        div_ruim.style.display = 'block';
+        }
+    }
+</script>

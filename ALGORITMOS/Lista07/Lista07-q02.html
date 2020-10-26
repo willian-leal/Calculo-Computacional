@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista07-q02</title>
+</head>
+<body>
+    <input placeholder="Informe sua nota" id="nota_aluno">
+    <button onclick="classificar()">Classificar Aluno</button> <br>
+    <div id="div_acimamedia" style="color: green;"></div>
+    <div id="div_ruim" style="color: red;"></div>
+    <div id="div_media" style="color: orange;"></div>
+    <div id="div_foracurva" style="color: blue;"></div>
+</body>
+</html>
+<script>
+   
+    function classificar(){
+
+    div_ruim.innerHTML = "";
+    div_media.innerHTML = "";
+    div_acimamedia.innerHTML = "";
+    div_foracurva.innerHTML = "";
+     
+    var nota = Number(nota_aluno.value);
+
+    if(nota <5){
+    div_ruim.innerHTML ="Aluno precisa de ajuda";
+}
+    else if(nota <=7){
+    div_media.innerHTML = "Aluno na média";
+}
+    else if(nota <=9.5){
+    div_acimamedia.innerHTML = "Aluno acima da média";
+}
+    else{
+    div_foracurva.innerHTML = "Aluno fora da curva";
+}
+}
+    
+
+
+</script>

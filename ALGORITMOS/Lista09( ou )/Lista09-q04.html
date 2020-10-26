@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista09-q04</title>
+</head>
+<body>
+    
+    <input placeholder="Nome da empresa" id="empresa">
+    <input placeholder="Valor da bolsa da empresa" id="bolsa">
+    <input placeholder="Valor do VR da empresa" id="vr">
+    <input placeholder="Tempo de deslocamento da empresa" id="desloc">
+    <button onclick="verificar()">É preferida?</button>
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+<script>
+
+    function verificar(){
+        if(bolsa.value >= 1800 || vr.value >= 20 || desloc.value <= 30){
+            div_resultado.innerHTML = `A empresa ${empresa.value} é uma de suas preferências`;
+        }
+        else{
+            div_resultado.innerHTML = `A empresa ${empresa.value} está fora da sua lista`;
+        }
+    }
+
+</script>

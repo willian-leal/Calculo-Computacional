@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista10-q02</title>
+</head>
+<body>
+
+    <button onclick="jogador1()">Jogador 1 jogar dado</button>
+    <button onclick="jogador2()">Jogador 2 jogar dado</button>
+    <div id="div_jogador1"></div>
+    <div id="div_jogador2"></div>
+    <div id="div_resultado"></div>
+    
+</body>
+</html>
+<script>
+
+var dado1;
+var dado2;
+
+    function jogador1(){
+        div_jogador1.innerHTML = 'Primeiro jogador: ';
+
+        dado1 = parseInt(Math.random() * 6)+ 1; 
+        div_jogador1.innerHTML += dado1;
+   }
+   
+   function jogador2(){
+        div_jogador2.innerHTML = 'Segundo jogador: ';
+
+        dado2 = parseInt(Math.random() * 6)+ 1; 
+        div_jogador2.innerHTML += dado2;
+        verificar()
+   }
+   
+   function verificar(){
+  
+   if(dado1 > dado2){
+        div_resultado.innerHTML = 'Primeiro jogador venceu';
+    }
+    else if(dado1 < dado2){
+        div_resultado.innerHTML = 'Segundo jogador venceu';
+    }
+    else{
+        div_resultado.innerHTML = 'Deu empate';
+    }
+ }
+</script>

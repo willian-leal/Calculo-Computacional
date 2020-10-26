@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista 03 - questão 08</title>
+</head>
+
+<body>
+
+    <input autofocus placeholder="Valor do Salário" id="salario">
+
+    <br>
+    <button onclick="calcular()">
+        Calcular Descontos
+    </button>
+
+    <div id="div_descontos" style="display: none;">
+        Seus descontos serão de: <br>
+        INSS: <b id="b_inss"></b> <br>
+        IR: <b id="b_ir"></b> <br>
+        Total de descontos: <b id="b_descontos"></b> <br>
+        Seu salário, após os descontos será de:
+        <u><b id="b_salario_liquido"></b></u>
+    </div>
+
+</body>
+
+</html>
+<script>
+
+    function calcular() {
+
+        var valor_salario = Number(salario.value);
+
+        var inss = valor_salario * 0.1;
+        var ir = valor_salario * 0.2;
+        var descontos = inss + ir;
+        var salario_liquido = valor_salario - descontos;
+
+        b_inss.innerHTML = `R$${inss.toFixed(2)}`;
+        b_ir.innerHTML = `R$${ir.toFixed(2)}`;
+        b_descontos.innerHTML = `R$${descontos.toFixed(2)}`;
+        b_salario_liquido.innerHTML = `R$${salario_liquido.toFixed(2)}`;
+
+        div_descontos.style.display = 'block';
+    }
+
+</script>

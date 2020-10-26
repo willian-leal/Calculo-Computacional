@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04 - q01</title>
+</head>
+<body>
+    <h2>IMC</h2>
+    <input placeholder="Seu peso" id="peso"> <br>
+    <input placeholder="Sua altura" id="altura"> <br>
+    
+    <button onclick="calcular()">
+        Calcular IMC
+    </button>
+
+    <div id="div_resultado"></div>
+</body>
+</html>
+<script>
+
+function calcular() {
+   var imc = Number(peso.value) / Number(altura.value) ** 2;
+   div_resultado.innerHTML = imc.toFixed(2);
+   // toFixed() arredonda o número 
+   // a quantidade de casas decimais é o que colocamos dentro
+   // ex: toFixed(2) arredonda para 2 casas decimais
+
+}
+
+</script>

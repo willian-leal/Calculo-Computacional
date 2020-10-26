@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista08-q01</title>
+</head>
+<body>
+    
+    <input placeholder="Informe sua renda" id="renda_usuario">
+    <input placeholder="Informe a renda total da sua familia" id="renda_familia">
+    <button onclick="verificar()">Verficar ajuda</button>
+    
+</body>
+</html>
+<script>
+
+function verificar(){
+    if(renda_usuario.value <=1050 && renda_familia.value <=2100){
+        alert('Você tem direito!')
+    }
+    else{
+        alert('Você NÃO terá direito')
+    }
+}
+
+</script>

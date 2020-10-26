@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista04-q08</title>
+</head>
+<body>
+    <input placeholder="Valor do Carro" id="valor">
+    <input placeholder="Taxa(mês)" id="taxa">
+    <input placeholder="Qtd Parcelas" id="parcelas">
+    <button onclick="calcular()" >Calcular Prejú</button>
+    <div id="div_resultado"></div>
+    
+</body>
+</html>
+<script>
+    function calcular(){
+        var valor_avista = Number(valor.value);
+        var valor_juros = Number(taxa.value);
+        var valor_parcelas = Number(parcelas.value);
+       
+        var preju = ( (valor_avista/valor_parcelas) * ( (valor_juros**valor_parcelas) -1) ) / (valor_juros-1);
+       
+        var mes = valor_avista*0.8;
+       
+        var quantos = preju/valor_avista;
+       
+        div_resultado.innerHTML = ` Seu Prejúizo vai ser de<b>R$${preju.toFixed(2)}</b>, Após 1 mês ele valera <b>R$${mes.toFixed(2)}</b>, e a quantidade de carros que você pagaria é <b>R$${quantos.toFixed(2)}</b>`;
+
+    }
+</script>

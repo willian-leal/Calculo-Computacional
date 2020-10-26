@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista07-q05</title>
+</head>
+<body>
+    <input placeholder="Qtd de pães franceses come p/dia" id="pao">
+    <input placeholder="Qtd de bolacha recheada come p/dia" id="bolacha">
+    <input placeholder="Qtd de copos achocolatados toma p/dia" id="achocolatado">
+    <button onclick="analisar()">Verficar calorias</button>
+    <div id="div_ideal" style="display: none;"><img src="forma.png" alt=""><br>Parabéns, vai sair em forma da quarentena</div>
+    <div id="div_leve" style="display: none;"><img src="levemente.jpeg" alt=""><br>CUIDADO, vai ficar mais "fofinho(a) após a quarentena</div>
+    <div id="div_acima" style="display: none;"><img src="acima.jpeg" alt=""><br>Bom, acho que muitos não vão te reconher após a quarentena</div>
+</body>
+</html>
+<script>
+function analisar(){
+
+    
+
+    var caloria_pao = Number(pao.value) *50;
+    var caloria_bolacha = Number(bolacha.value) *80;
+    var caloria_achocolatado = Number(achocolatado.value) *70;
+    var caloria_total = caloria_pao + caloria_bolacha + caloria_achocolatado;
+
+    if(caloria_total < 200){
+        div_ideal.style.display = 'block';
+        div_leve.style.display = 'none';
+        div_acima.style.display = 'none';
+
+    }
+    else if(caloria_total > 400){
+        div_ideal.style.display = 'none';
+        div_leve.style.display = 'none';
+        div_acima.style.display = 'block';
+    }
+    else{
+        div_ideal.style.display = 'none';
+        div_leve.style.display = 'block';
+        div_acima.style.display = 'none';
+    }
+}
+</script>

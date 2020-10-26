@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Informe o valor da passagem : <input type="text" id="valor">
+    Informe a quantidade viagens por mês: <input type="text" id="viagens">
+    <br>
+    <button onclick="Calcular()">Calcular Média</button>
+    <div id="div_media"></div>
+</body>
+
+</html>
+<script>
+    function Calcular() {
+        //div_media.innerHTML = `Sua media
+        //foi de ${(Number(nota1.value) + Number(nota2.value)) / 2}`;
+        var media = (Number(valor.value) * Number(viagens.value));
+        div_media.innerHTML = `Sua média foi de <u>R$</u>${media}`;
+    }
+</script>

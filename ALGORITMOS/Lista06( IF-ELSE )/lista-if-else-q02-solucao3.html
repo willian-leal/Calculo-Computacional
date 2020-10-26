@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista if-else q02</title>
+</head>
+<body>
+    <input placeholder="Qual o saldo?" id="saldo"><br>
+    <input placeholder="Valor do débito" id="debito"><br>
+
+    <button onclick="analisar()">Analisar conta</button>
+
+    <br>
+    <i id="i_azul" style="color: blue;"></i>
+    <b id="b_vermelho" style="color: red;"></b>
+    
+</body>
+</html>
+<script>
+function analisar() {
+    var valor_saldo = Number(saldo.value);
+    var valor_debito = Number(debito.value);
+
+    var saldo_atual = valor_saldo - valor_debito;
+
+    b_vermelho.innerHTML = '';
+    i_azul.innerHTML = '';
+
+    var frase = `O saldo atual da conta corrente é R$${saldo_atual.toFixed(2)}`;
+
+    if (saldo_atual < 0) {
+        b_vermelho.innerHTML = frase;
+    } else {
+        i_azul.innerHTML = frase;
+    }  
+    
+}
+</script>

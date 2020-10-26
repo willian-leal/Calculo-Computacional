@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista10-q01</title>
+</head>
+<body>
+
+    <button onclick="nota()">Gerar nota</button>
+    <button onclick="freq()">Gerar frequência</button>
+    <div id="div_nota"></div>
+    <div id="div_freq"></div>
+    
+</body>
+</html>
+<script>
+
+    function nota(){
+        div_nota.innerHTML = 'Nota do aluno: ';
+
+        var numero = parseInt(Math.random() * 11); 
+        div_nota.innerHTML += numero;
+   }
+   function freq(){
+        div_freq.innerHTML = 'Frequência do aluno: ';
+
+        var numero = parseInt(Math.random() * 101); 
+        div_freq.innerHTML += numero.toFixed(2);
+   }
+
+</script>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista07-q07</title>
+</head>
+<body>
+    <h3>Estações do ano</h3>
+        <select onclick="mostrar()" name="" id="estacoes">
+            <option value="jan">Janeiro</option>
+            <option value="fev">Fevereiro</option>
+            <option value="mar">Março</option>
+            <option value="abr">Abril</option>
+            <option value="mai">Maio</option>
+            <option value="jun">Junho</option>
+            <option value="jul">Julho</option>
+            <option value="ago">Agosto</option>
+            <option value="set">Setembro</option>
+            <option value="out">Outubro</option>
+            <option value="nov">Novembro</option>
+            <option value="dez">Dezembro</option>
+        </select>
+        <br>
+        <div id="div_primavera" style="display: none;">Primavera<br><img src="primavera.jpeg" alt=""></div>
+        <div id="div_verao" style="display: none;">Verão<br><img src="verao.jpeg" alt=""></div>
+        <div id="div_outono" style="display: none;">Outono<br><img src="outono.jpeg" alt=""></div>
+        <div id="div_inverno" style="display: none;">inverno<br><img src="inverno.jpeg" alt=""></div>
+        
+</body>
+</html> 
+<script>
+    function mostrar(){
+
+        if(estacoes.value == 'jan'){
+            div_inverno.style.display = 'block';
+            div_primavera.style.display = 'none';
+            div_verao.style.display = 'none';
+            div_outono.style.display = 'none';
+
+        }
+        else if(estacoes.value == 'fev'){
+            div_inverno.style.display = 'block';
+            div_primavera.style.display = 'none';
+            div_verao.style.display = 'none';
+            div_outono.style.display = 'none';
+
+        }
+        else if(estacoes.value == 'mar'){
+            div_inverno.style.display = 'none';
+            div_primavera.style.display = 'block';
+            div_verao.style.display = 'none';
+            div_outono.style.display = 'none';
+        }
+        else if(estacoes.value == 'abr'){
+            div_inverno.style.display = 'none';
+            div_primavera.style.display = 'block';
+            div_verao.style.display = 'none';
+            div_outono.style.display = 'none';
+        }
+        else if(estacoes.value == 'mai'){
+            div_inverno.style.display = 'none';
+            div_primavera.style.display = 'block';
+            div_verao.style.display = 'none';
+            div_outono.style.display = 'none';
+        }
+        else if(estacoes.value == 'jun'){
+            div_inverno.style.display = 'none';
+            div_primavera.style.display = 'none';
+            div_verao.style.display = 'block';
+            div_outono.style.display = 'none';
+        }
+        else if(estacoes.value == 'jul'){
+            div_inverno.style.display = 'none';
+            div_primavera.style.display = 'none';
+            div_verao.style.display = 'block';
+            div_outono.style.display = 'none';
+        }
+        else if(estacoes.value == 'ago'){
+            div_inverno.style.display = 'none';
+            div_primavera.style.display = 'none';
+            div_verao.style.display = 'block';
+            div_outono.style.display = 'none';
+        }
+        else if(estacoes.value == 'set'){
+            div_inverno.style.display = 'none';
+            div_primavera.style.display = 'none';
+            div_verao.style.display = 'none';
+            div_outono.style.display = 'block';
+        }
+        else if(estacoes.value == 'out'){
+            div_inverno.style.display = 'none';
+            div_primavera.style.display = 'none';
+            div_verao.style.display = 'none';
+            div_outono.style.display = 'block';
+        }
+        else if(estacoes.value == 'nov'){
+            div_inverno.style.display = 'none';
+            div_primavera.style.display = 'none';
+            div_verao.style.display = 'none';
+            div_outono.style.display = 'block';
+        }
+        else if(estacoes.value == 'dez'){
+            div_inverno.style.display = 'block';
+            div_primavera.style.display = 'none';
+            div_verao.style.display = 'none';
+            div_outono.style.display = 'none';
+        }
+    }
+</script>

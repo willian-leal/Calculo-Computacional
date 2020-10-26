@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04 - q11</title>
+</head>
+<body>
+    Valor guardado no cofrinho: 
+    R$<span id="s_guardado">0.00</span>
+    <br><br>
+    <input id="valor_deposito"> <br>
+    <br>
+    <button onclick="depositar()">Depositar</button>
+    <button onclick="tirar()">Tirar toda a grana</button>
+
+</body>
+</html>
+<script>
+    // variável GLOBAL
+    var guardado = 0;
+    
+    function depositar() {
+        guardado += Number(valor_deposito.value);
+        s_guardado.innerHTML = guardado.toFixed(2);
+    }
+
+    function tirar() {
+        guardado = 0;
+        s_guardado.innerHTML = guardado.toFixed(2);
+    }
+
+</script>

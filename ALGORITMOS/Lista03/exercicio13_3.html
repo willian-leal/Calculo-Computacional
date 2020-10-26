@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input autofocus placeholder="Quantas horas dormiu" id="horas_sono" ;>
+    <br>
+    <button onclick="sono()">
+        Calcular sono
+    </button>
+
+    <div id="div_sono" style="display: none;">
+        Ao dormir <u id="u_horas">X</u> horas, você dormiu: <br>
+        <u id="u_fase1">A</u> horas na <b>fase 1</b><br>
+        <u id="u_fase2">A</u> horas na <b>fase 2</b><br>
+        <u id="u_fase3">A</u> horas na <b>fase 3</b><br>
+        <u id="u_fase4">A</u> horas na <b>fase REM</b><br>
+    </div>
+</body>
+
+</html>
+<script>
+    function sono() {
+        var horas = Number(horas_sono.value);
+        var fase1 = horas * 0.05;
+        var fase2 = horas * 0.45;
+        var fase3 = horas * 0.3;
+        var fase4 = horas * 0.2;
+
+        u_fase1.innerHTML = fase1.toFixed(2);
+        u_fase2.innerHTML = fase2.toFixed(2);
+        u_fase3.innerHTML = fase3.toFixed(2);
+        u_fase4.innerHTML = fase4.toFixed(2);
+
+        div_sono.style.display = 'block';
+    }
+</script>

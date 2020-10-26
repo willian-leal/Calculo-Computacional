@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista09-q05</title>
+</head>
+<body>
+
+    <select name="" id="cor_cabelo">
+        <option value="preto">Preto</option>
+        <option value="vermelho">Vermelho</option>
+        <option value="amarelo">Amarelo</option>
+        <option value="castanho">Castanho</option>
+    </select>
+    
+    <input placeholder="Sua altura" id="altura_moca">
+    
+    <button onclick="verificar()">Deu match?</button>
+    <img id="img_resultado" style="height: 300px;">
+</body>
+</html>
+<script>
+
+    function verificar(){
+
+        var cabelo = cor_cabelo.value;
+        var altura = altura_moca.value;
+       
+        if(altura >= 1.7 && (cabelo == 'preto' || cabelo == 'vermelho')){
+            img_resultado.src = 'feliz.jpeg';
+        }
+        else{
+            img_resultado.src = 'triste.jpeg';
+        }
+    }
+
+</script>

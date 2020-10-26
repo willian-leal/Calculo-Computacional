@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista07-q04</title>
+</head>
+<body style="background-color: darkgrey;">
+    <h3>Qual time Grande de São Paulo você torce?</h3>
+        <select onclick="mostrar()" name="" id="times">
+            <option value="cor">Corinthians</option>
+            <option value="pal">Palmeiras</option>
+            <option value="sp">São Paulo</option>
+            <option value="san">Santos</option>
+        </select>
+        <br>
+        <div id="div_exibir"></div>
+        
+</body>
+</html> 
+<script>
+    function mostrar(){
+
+        div_exibir.innerHTML = '';
+
+        if(times.value == 'pal'){
+            div_exibir.innerHTML = '<p style="color: white; background-color: green";> Quando surge o alviverde imponente</p>';
+        }
+        else if(times.value == 'cor'){
+            div_exibir.innerHTML = '<p style="color: white; background-color: black";> Salve o Corinthians</p>';
+        }
+        else if(times.value == 'sp'){
+            div_exibir.innerHTML = '<p style="color: red; background-color: black";> Salve o tricolor paulista</p>';
+        }
+        else {
+            div_exibir.innerHTML = '<p style="color: black; background-color: white";> Agora quem da bola é o Santos</p>';
+        }
+    
+    }
+</script>

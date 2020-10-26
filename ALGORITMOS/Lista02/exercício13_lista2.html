@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula12</title>
+</head>
+<body>
+    <h2>O QUE ESTÁ ACONTECENDO NO JOGO?</h2>
+<button onclick="GOL_DO_BRASIL()">GOL DO BRASIL</button>
+
+<button onclick="GOL_DA_ALEMANHA()">GOL DA ALEMANHA</button>  
+
+<button onclick="RECOMECA_PARTIDA()">RECOMEÇA A PARTIDA</button>
+
+<div id="div_acontecimentos"> 
+<h3>AGORA NO JOGO...</h3>
+
+</div>
+</body>
+</html>
+
+<script>
+    function GOL_DO_BRASIL(){
+        div_acontecimentos.innerHTML +='<p style="color: green;">GOOOOL DO BRASIL!</p>';
+    }
+    function GOL_DA_ALEMANHA(){
+        div_acontecimentos.innerHTML +='<p style="background-color: black;color: red;">GOOOL DA ALEMANHA!</p>';
+    }
+    function RECOMECA_PARTIDA(){
+        div_acontecimentos.style.display="none";
+    }
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>q14</title>
+</head>
+<body>
+
+    <button onclick="iniciar()">Iniciar Jogo</button>
+    <br>
+    <br>
+
+    <div id="div_um" style="display: none"><img onclick="lutadorum()" src="lutador1.png"></div><br>
+
+    <div id="div_azul" style="display: none; background-color: blue; height: 40px"></div><br>
+
+    <div id="div_dois" style="display: none"><img onclick="lutadordois()" src="lutador2.png"></div><br>
+    
+    <div id="div_verm" style="display: none; background-color: red; height: 40px"></div><br>
+
+    <span id="s_um" style="display: none">Golpe sofrido pelo lutador 1: <b id="b_um">0</b><br></span>
+
+    <span id="s_dois" style="display: none">Golpe sofrido pelo lutador 2: <b id="b_dois">0</b></span>
+
+</body>
+</html>
+<script>
+function iniciar(){
+    div_um.style.display= 'block';
+    div_azul.style.display= 'block';
+    div_dois.style.display= 'block';
+    div_verm.style.display= 'block';
+    s_um.style.display='block';
+    s_dois.style.display='block';
+}
+function lutadorum(){
+    var azul = (div_azul.style.display);
+    azul = 'height: 5px' ;
+    div_azul.innerHTML= azul;
+}
+</script>

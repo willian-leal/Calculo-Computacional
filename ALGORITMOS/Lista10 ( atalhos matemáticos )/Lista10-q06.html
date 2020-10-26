@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista10-q06</title>
+</head>
+<body>
+
+    <button onclick="jogar()">Sortear times</button>
+    
+    <img id="img_resultado" style="height: 150px;">    
+</body>
+</html>
+<script>
+
+    var numero;
+    function jogar(){
+        numero = parseInt(Math.random() * 4); 
+        resultado()
+   }
+   function resultado(){
+       img_resultado.src = '';
+       
+       if(numero >=3){
+        img_resultado.src ='cor.jpeg';
+       }
+       else if(numero >=2){
+        img_resultado.src ='sant.png';
+       }
+       else if(numero >=1){
+        img_resultado.src ='sp.png';
+       }
+       else{
+        img_resultado.src ='pal.png';
+       }
+   }
+
+
+</script>

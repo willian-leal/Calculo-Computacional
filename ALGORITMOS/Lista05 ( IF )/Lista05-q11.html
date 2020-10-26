@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista05-q11</title>
+</head>
+<body>
+
+    <input placeholder="Horario que assiste serie?" id="horario"><br>
+ 
+    <button onclick="calcular()">
+        Ver recomendação
+    </button>    
+   
+    <div id="div_resultado"></div>
+
+
+</body>
+</html>
+<script>
+    function calcular() {
+
+        var valor_horario = Number(horario.value);
+
+        div_resultado.innerHTML = `Não é recomendável que você assista sua série favorita no horário ${valor_horario}hr!`;
+
+        if (valor_horario < 19) {
+            div_resultado.innerHTML = `O horário ${valor_horario}hr é adequado para assistir sua série favorita!`;
+        }
+
+        if (valor_temperatura > 21) {
+            div_resultado.innerHTML = `O horário ${valor_horario}hr é adequado para assistir sua série favorita!`;
+        }
+  
+    }
+</script>

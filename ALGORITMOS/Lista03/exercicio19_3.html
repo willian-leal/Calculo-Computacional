@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Os grandes de São Paulo</h3>
+    <select id="times">
+        <option value="https://upload.wikimedia.org/wikipedia/pt/b/b4/Corinthians_simbolo.png">Corinthians
+        </option>
+        <option value="https://a.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F2029.png">Palmeiras
+        </option>
+        <option value="https://www.santosfc.com.br/wp-content/uploads/2017/08/santos-fc-logo.png">Santos</option>
+        <option value="https://upload.wikimedia.org/wikipedia/pt/4/4b/S%C3%A3o_Paulo_Futebol_Clube.png">São Paulo
+        </option>
+    </select>
+    <button onclick="ver()">
+        Ver Escudo
+    </button><br>
+    <img style="height: 200px;" id="imagem"></div>
+</body>
+
+</html>
+<script>
+    function ver() {
+        imagem.src = times.value;
+
+    }
+</script>

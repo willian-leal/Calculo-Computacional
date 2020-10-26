@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício9</title>
+</head>
+<body>
+
+    <button onclick="PARE()">PARE</button>
+    <button onclick="PENSE()">PENSE</button>
+    <button onclick="SIGA()">SIGA</button>
+    
+    <br>
+    <span id="span_pare" style="display: none;background-color: red;color: white;">
+        Pare e aguarde
+    </span>
+    <span id="span_pense" style="display: none;background-color: black;color: yellow;">
+        Pense se pode seguir ou se deve parar!
+    </span>
+    <span id="span_siga" style="display: none;color: green;">
+        Pode seguir adiante :)".
+    </span>
+</body>
+</html>
+<script>
+    function PARE(){
+        span_pare.style.display='block';
+        span_pense.style.display='none';
+        span_siga.style.display='none';
+
+    }
+    function PENSE(){
+        span_pare.style.display='none';
+        span_pense.style.display='block';
+        span_siga.style.display='none';
+    }
+    function SIGA(){
+        span_pare.style.display='none';
+        span_pense.style.display='none';
+        span_siga.style.display='block';
+    }
+</script>

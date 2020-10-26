@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input placeholder="Pessoa amada" id="ama">
+    <input placeholder="quanto ama ela?" id="quant">
+
+    <button onclick="frase()">Expressar amor!</button>
+    <div id="div_resultado"></div>
+
+</body>
+
+</html>
+<script>
+
+    contador = 0;
+
+    function frase() {
+        while (contador < quant.value) {
+            div_resultado.innerHTML += `${ama.value} eu te amo!,<i> Sempre lembre disso! <i><br>`;
+            contador++;
+        }
+    }
+
+</script>

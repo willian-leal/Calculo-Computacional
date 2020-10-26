@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista05-q02</title>
+</head>
+<body>
+    informe a primeira nota <input id="primeira"><br>
+    informe a segunda nota <input id="segunda"><br>
+    informe a terceira nota <input id="terceira"> <br>
+    
+    <button onclick="calcular()">Analisar desempenho</button><br>
+    <div id="div_resultado"></div>
+   </body>
+   </html>
+   <script>
+    
+    function calcular(){
+        
+        var media = (Number(primeira.value) + Number(segunda.value) + Number(terceira.value))/3;
+        
+        div_resultado.innerHTML = `Sua média foi de ${media.toFixed(2)}`;
+        
+        if(media > 9.4){
+            div_resultado.innerHTML +="<br> Parabens, vc é fora de serie"
+        }
+    }
+
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista06-q07</title>
+</head>
+<body>
+    
+<input placeholder="informe sua frequência" id="frequencia">
+<button onclick="validar()">Analisar Frequência</button>
+<div id="div_estudioso" style="display: none"><img src="estudioso.jpeg" alt=""></div>
+<div id="div_turista" style="display: none" ><img src="turista.jpeg" alt=""></div>
+
+
+</body>
+</html>
+<script>
+    function validar(){
+        div_estudioso.style.display = 'none';
+        div_turista.style.display = 'none';
+        
+        if(frequencia.value <= 50){
+        div_turista.style.display = 'block';
+        div_estudioso.style.display = 'none';
+        }
+        else{
+        div_turista.style.display = 'none';
+        div_estudioso.style.display = 'block';
+        }
+    }
+</script>

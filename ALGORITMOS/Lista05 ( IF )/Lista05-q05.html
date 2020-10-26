@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista05-q05</title>
+</head>
+<body> 
+
+    Informe o valor da pizza<input id="pizza"><br>
+    Informe a quantidade de amigos<input id="amigos"><br>
+    <br>
+    <button onclick="rola_pizza()">Rola a pizza?</button><br>
+    <br>
+    <div id="div_resultado"></div>
+    <div id="div_ruim" style="display: none; color: blue"><i><b>Deu ruim! Pizza muito cara</b></i></div>
+    
+</body>
+</html>
+<script>
+function rola_pizza(){
+
+        div_ruim.style.display ='none';
+    
+    var conta = Number(pizza.value) / Number(amigos.value);
+
+    div_resultado.innerHTML = `Cada amigo vai pagar R$${conta} pela pizza`;
+    
+    if (conta >20){
+        div_ruim.style.display ='block';
+    }
+    
+}
+</script>

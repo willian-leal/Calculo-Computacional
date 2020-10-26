@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista08-q03</title>
+</head>
+<body>
+    
+    <select onclick="mostra()" id="cafe_manha">
+        <option value="ovos">Ovos</option>
+        <option value="leite">Leite de arroz</option>
+        <option value="bacon">Bacon</option>
+    </select>
+    <select onclick="mostrar2()" id="almoco">
+        <option value="bife">Bife</option>
+        <option value="soja">Hamburguer de soja</option>
+        <option value="frango">Frango grelhado</option>
+    </select>
+    <select onclick="mostrar3()" id="janta">
+        <option value="picanha">Picanha de Soja</option>
+        <option value="cupim">Cupim</option>
+        <option value="coracao">Coração</option>
+    </select>
+    <button onclick="verificar()">Sou vegano</button>
+    <div id="resultado_um" style="display: none;"></div>
+    <div id="resultado_dois" style="display: none;"></div>
+    <div id="resultado_tres" style="display: none;"></div>
+</body>
+</html>
+<script>
+    function verificar(){
+        if(cafe_manha.value == 'leite' && almoco.value == 'soja' && janta.value == 'picanha'){
+            alert('Sim, você é vegano!');
+        }
+        else{
+            alert('Não, você não é vegano');
+        }
+    }
+
+</script>

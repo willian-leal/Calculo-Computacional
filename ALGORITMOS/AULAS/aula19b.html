@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula17</title>
+</head>
+
+<body>
+    seu nome: <input id="nome"><br>
+    seu bairro: <input id="bairro"><br>
+
+    <button onclick="cadastrar()">Cadastrar</button>
+
+    <div id="div_cadastro" style="display:nome;">
+        Seu nome
+        é <b id="b_nome" style="color:red"></b>
+        Uau! E voce mora no
+        bairro <u id="u_bairro" style="color:green"></u>!Nossa!
+    </div>
+
+</body>
+
+</html>
+<script>
+    function cadastrar() {
+        div_cadastro.style.display = 'block';
+        b_nome.innerHTML = nome.value;
+        u_bairro.innerHTML = bairro.value;
+    }
+</script>

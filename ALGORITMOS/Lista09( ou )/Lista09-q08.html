@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista09-q08</title>
+</head>
+<body>
+
+    <select id="marca"> 
+        <option value="samsung">Samsung</option>
+        <option value="lg">LG</option>
+        <option value="mondial">Mondial</option>
+        <option value="britania">Britânia</option>
+    </select><br>
+    <input placeholder="Preço da Tv" id="preco">
+    <button onclick="analisar()">Analisar Compra</button>
+    <div id="div_resultado"></div>
+    
+</body>
+</html>
+<script>
+
+    function analisar(){
+        if(preco.value <800){
+            div_resultado.innerHTML = `Tv fora fa faixa de preço, Preço baixo demais!`;        
+    }
+    else if(preco.value >2000){
+            div_resultado.innerHTML = `Tv fora fa faixa de preço, Tv cara demais, infelizmente`;        
+    }
+        else if(preco.value >=800 && preco.value <=2000 && (marca.value == 'mondial' || marca.value == 'britania')){
+            div_resultado.innerHTML = `Na faixa de preço, porém marca não confiável`;
+    }
+    else if(preco.value >=800 && preco.value <=2000 && (marca.value == 'lg' || marca.value == 'samsung')){
+        div_resultado.innerHTML = `Essa Tv pode entrar na sua lista!`;
+    }
+}
+</script>

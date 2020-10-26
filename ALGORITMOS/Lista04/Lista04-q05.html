@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista04-q05</title>
+</head>
+<body>
+    <input placeholder="Primeiro número" id="primeiro">
+    <input placeholder="Segundo número" id="segundo">
+    <button onclick="calcular()">Fazer Potência</button>
+    <div id="div_resultado"></div>
+    
+</body>
+</html>
+<script>
+    function calcular(){
+        var n = Number(primeiro.value);    
+        var nn = Number(segundo.value);    
+        var potencia = n ** nn;
+        div_resultado.innerHTML = potencia;
+    }    
+        
+</script>

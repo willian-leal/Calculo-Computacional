@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula13</title>
+</head>
+<body>
+    <h3>Limpando conteúdos</h3>
+    Vingadores: <br>
+    Capitão América<br>
+    <b id="b_pantera">Pantera Negra<br></b>
+    Hulk<br>
+    <i id="i_aranha">Homem Aranha<br></i>
+    Homem de Ferro<br>
+    <span id="span_estranho">Dr. Estranho<br></span>
+
+        <div>Metade dos seres vivos sortudos</div>
+        <div id="div_azarados">
+            Metade dos seres vivos azarados
+        </div>
+        <button onclick="thanos()">You should had gane the head!</button>
+</body>
+</html>
+<script>
+function thanos(){
+    b_pantera.innerHTML='';
+    i_aranha.innerHTML='';
+    span_estranho.innerHTML='';
+    div_azarados.innerHTML='';
+}
+
+</script>

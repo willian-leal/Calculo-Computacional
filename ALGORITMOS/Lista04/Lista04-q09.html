@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista04-q09</title>
+</head>
+<body>
+    <h1>Skol Vírus</h1>
+    <input placeholder="Pessoas Infectadas" id="infectadas">
+    <button onclick="ontem()">Infectadas Ontem</button>
+    <button onclick="amanha()">Infectadas Amanhã</button>
+    <button onclick="mes()">Infectadas daqui 1 Mês</button><br>
+    <br>
+    <div id="div_resultado"></div>
+</body>
+</html>
+<script>
+    function ontem(){
+        var yesterday = Number(infectadas.value)-35;
+        // var tomorrow = Number(infectadas.value)+35;
+        // var month = Number(infectadas.value)*(35*30);
+        div_resultado.innerHTML = `Ontem o número de infectados foi de <b>${yesterday}</b>`;
+    }
+    
+    function amanha(){
+        // var yesterday = Number(infectadas.value)-35;
+        var tomorrow = Number(infectadas.value)+35;
+        // var month = Number(infectadas.value)*(35*30);
+        div_resultado.innerHTML = `Amanhã o número de infectados será <b>${tomorrow}</b>`;
+    }
+    
+    function mes(){
+        // var yesterday = Number(infectadas.value)-35;
+        // var tomorrow = Number(infectadas.value)+35;
+        var month = Number(infectadas.value)*(35*30);
+        div_resultado.innerHTML = `Daqui um mês o número de infectados será de <b>${month}</b>`;
+    }
+</script>

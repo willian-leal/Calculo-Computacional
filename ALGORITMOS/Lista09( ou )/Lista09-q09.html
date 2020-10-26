@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista09-q09</title>
+</head>
+<body>
+    
+    <input placeholder="informe sua nota" id="nota">
+    <input placeholder="informe sua frequência" id="freq">
+    <button onclick="analisar()">Analisar aluno</button>
+    <div id="div_resultado"></div><br>
+    <div id="div_resultado2"></div>
+</body>
+</html>
+<script>
+
+    function analisar(){
+        if(freq.value >=75){
+            div_resultado2.innerHTML =`Aluno aprovado por frequência`;
+        }
+        else{
+            div_resultado2.innerHTML =`Aluno reprovado por frequência`;
+        }
+        if(nota.value <0 || nota.value >10){
+            alert(`Onde já se viu nota <0 ou >10?!`);
+            div_resultado.innerHTML = ``;
+            div_resultado2.innerHTML = ``;
+        }
+        else if(freq.value <0 || freq.value >100){
+            alert(`Onde já se viu frequência <0 ou >100?!`);
+            div_resultado.innerHTML = ``;
+            div_resultado2.innerHTML = ``;
+        }
+        else if(nota.value >=0 && nota.value <6 ){
+            div_resultado.innerHTML = `Aluno abaixo da média`;
+        }
+        else if(nota.value >=6 && nota.value <=8){
+            div_resultado.innerHTML = `Aluno ficou na média`;
+        }
+        else if(nota.value >8 && nota.value <=10){
+            div_resultado.innerHTML = `Aluno acima da média`;
+        }
+        
+    }
+
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista05-q14</title>
+</head>
+<body>
+    
+<input placeholder="Distancia da sua casa a pizzaria" id="distancia">
+<button onclick="analisar()">Ver fato</button>
+<div id="div_resultado"></div>
+
+</body>
+</html>
+<script>
+
+function analisar(){
+
+    var distancia_informada = Number(distancia.value);
+    
+    div_resultado.innerHTML='A sua pizza será entregue, porém o valor de entrega é de R$ 25,00';
+
+    if(distancia_informada < 50){
+        div_resultado.innerHTML='A sua pizza será entregue e não custará nada para você :)';
+    }
+    if(distancia_informada > 250){
+        div_resultado.innerHTML='A Pizza Rãti não entrega neste endereço!';
+    }
+   
+}
+
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <button onclick="sorteio()">Eu curto 3 e 5</button>
+    <div id="div_resultado"></div>
+
+</body>
+
+</html>
+<script>
+
+    function sorteio() {
+        contador = 0;
+
+        while (contador < 100) {
+            contador++;
+            if (contador % 3 == 0 && contador % 5 == 00) {
+                div_resultado.innerHTML += `${contador}<b> É TRI E PENTA!</b><br>`;
+            }
+            else if (contador % 5 == 0) {
+                div_resultado.innerHTML += `${contador}<b> É PENTA!</b><br>`;
+            }
+            else if (contador % 3 == 0) {
+                div_resultado.innerHTML += `${contador}<b> É TRI!</b><br>`;
+            }
+            else {
+                div_resultado.innerHTML += `${contador}<br>`;
+            }
+        }
+
+    }
+
+</script>

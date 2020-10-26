@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula12</title>
+</head>
+<body>
+    <h2>O QUE ESTÁ ACONTECENDO NO JOGO?</h2>
+<button onclick="GOL()">GOL</button>
+
+<button onclick="BOLA_NA_TRAVE()">BOLA_NA_TRAVE</button>    
+
+<button onclick="FALTA()">FALTA</button>
+
+<div id="div_acontecimentos"> 
+<h3>AGORA NO JOGO...</h3>
+
+</div>
+
+</body>
+</html>
+
+<script>
+    function GOL(){
+        div_acontecimentos.innerHTML += 'GOOOOOL!<br>';
+    }
+    function BOLA_NA_TRAVE(){
+        div_acontecimentos.innerHTML += 'NA TRAAAAVE!<br>';
+    }
+    function FALTA(){
+        div_acontecimentos.innerHTML += 'FALTA!<br>';
+    }
+</script>

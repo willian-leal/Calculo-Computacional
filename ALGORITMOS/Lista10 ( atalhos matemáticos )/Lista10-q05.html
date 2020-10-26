@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista10-q05</title>
+</head>
+<body>
+    
+    Temperatura sorteada : <b id="b_cliques">0</b>
+    <button onclick="clicar()">Sortear Temperatura</button><br>
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+<script>
+var cliques = 0;
+
+function clicar() {
+
+    var numero = parseInt(Math.random()* 102 -51);
+    cliques.innerHTML = numero;
+    if(numero <1 && numero >-50){
+        div_resultado.innerHTML = 'Dá pra conservar qualquer aimento';
+        b_cliques.innerHTML = numero;
+    }
+    else if(numero >=1 && numero <=10){
+        div_resultado.innerHTML = 'Conserva a maioria dos alimentos';
+        b_cliques.innerHTML = numero;
+    }
+    else if(numero <-50){
+        
+        div_resultado.innerHTML = 'Dá pra conservar qualquer aimento';
+        b_cliques.innerHTML = numero;
+    }
+    else{
+        
+        div_resultado.innerHTML = 'Estraga a maioria dos aimento';
+        b_cliques.innerHTML = numero;
+    }
+}
+
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista05-q06</title>
+</head>
+<body>
+    
+<input placeholder="Informe a quantidade de kWh" id="quantidade">
+<button onclick="calcular()">Ver valor total da conta</button>
+<div id="div_resultado"></div>
+
+</body>
+</html>
+<script>
+
+function calcular(){
+
+    var conta = Number(quantidade.value) * 0.85;
+
+    if(quantidade <=100){
+        (conta*100)/10;
+    }
+    
+    div_resultado.innerHTML=`Valor total da conta ${conta}`;
+}
+</script>

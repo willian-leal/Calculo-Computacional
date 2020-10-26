@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><b>DESAFIO!</b></title>
+</head>
+<body>
+
+    <h3><b>Escolha uma Espécie</b></h3>
+
+<select id="especie">
+    <option value="">- Escolha uma Esécie-</option>
+    <option onclick="FazerOvi" value="block">Ovíparos</option>
+    <option onclick="FazerMam" value="block">Mamíferos</option>
+    </select><br><br>
+
+    <div style="display: none;" id="div_ovi">
+    <select onchange="oviparo()" id="oviparo">
+        <option value="">- Escolha um Ovíparo-</option>
+        <option value="Galinha">Galinha</option>
+        <option value="Peixe">Peixe</option>
+        <option value="Tartaruga">Tartaruga</option>
+    </select>
+</div><br>
+<img src="" id="imagem1" style="height: 100px; display: none;"><br>
+
+<div style="display: none;" id="div_mam">
+    <select onchange="mamifero()" id="mamifero">
+        <option value="- Escolha um Mamífero-">Escolha</option>
+        <option value="Elefante">Elefante</option>
+        <option value="Porco">Porco</option>
+        <option value="Coelho">Coelho</option>
+</select>  
+</div>
+<img src="" id="imagem2" style="height: 100px; display: none;"><br>
+
+
+</body>
+</html>
+<script>
+
+function FazerOvi(){
+    div_ovi.style.display=especie.value;
+}
+
+</script>

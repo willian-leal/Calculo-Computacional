@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04 - q03</title>
+</head>
+<body>
+    <h2>Raízes</h2>
+    <input placeholder="Número" id="numero"> <br>
+    
+    <button onclick="raiz2()">
+        Calcular Raiz Quadrada
+    </button>
+    <button onclick="raiz3()">
+        Calcular Raiz Cúbica
+    </button>
+
+    <div id="div_resultado"></div>
+</body>
+</html>
+<script>
+
+function raiz2() {
+   var resultado = Number(numero.value) ** (1/2);
+   div_resultado.innerHTML = resultado.toFixed(2);
+   // toFixed() arredonda o número 
+   // a quantidade de casas decimais é o que colocamos dentro
+   // ex: toFixed(2) arredonda para 2 casas decimais
+}
+
+
+function raiz3() {
+   var resultado = Number(numero.value) ** (1/3);
+   div_resultado.innerHTML = resultado.toFixed(2);
+   // toFixed() arredonda o número 
+   // a quantidade de casas decimais é o que colocamos dentro
+   // ex: toFixed(2) arredonda para 2 casas decimais
+}
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input autofocus placeholder="Votos do primeiro candidato" id="primeiro_cand"><br>
+    <br>
+    <input placeholder="Votos do segundo candidato" id="segundo_cand"><br>
+    <br>
+    <input placeholder="Votos nulos" id="vt_nulo"><br>
+    <br>
+    <input placeholder="Votos brancos" id="vt_brancos"><br>
+    <br>
+    <button onclick="calcular()">RESULTADO DA ELEIÇÃO</button>
+    <br>
+    <div style="display: none;" id="div_resultado">
+    <b>Total de votos:</b><u id="u_votos">200</u><br> 
+    <b>Primeiro candidato:</b><u id="u_primeiro">A</u><br>
+    <b>Segundo candidato:</b><u id="u_segundo">B</u><br>
+    <b>Inválidos:</b><u id="u_invalidos">C</u> 
+    </div>
+    
+</body>
+</html>
+<script>
+    function calcular(){
+        var total = (Number(primeiro_cand.value) + Number(segundo_cand.value));
+        u_votos.innerHTML = total.value;
+        u_primeiro.innerHTML = primeiro_cand.value;
+        u_segundo.innerHTML = segundo_cand.value; 
+        u_invalidos.innerHTML = Number(vt_nulo.value) + Number(vt_brancos.value);
+
+        div_resultado.style.display='block';
+
+    }
+</script>

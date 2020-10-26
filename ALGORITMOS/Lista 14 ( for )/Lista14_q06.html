@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista for - q01</title>
+</head>
+<body>
+
+    <button onclick="falar()">
+        Diga algo sobre a quarentena
+    </button>
+    
+    <div id="div_frase"></div>
+
+</body>
+</html>
+<script>
+    function falar() {
+        div_frase.innerHTML = '';
+        
+        for (var contador=1; contador <=7; contador++) {
+            div_frase.innerHTML += `${contador}. Não aguento mais <br>`;
+        }
+    }
+</script>

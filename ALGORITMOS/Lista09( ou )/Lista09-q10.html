@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista09-q08</title>
+</head>
+<body>
+
+    <input placeholder="Sua avaliação" id="avaliacao">
+    <button onclick="avaliar()">Avaliar</button>
+    <img id="img_resultado" style="height: 300px;">
+
+</body>
+</html>
+<script>
+
+function avaliar(){
+    if(avaliacao.value <0 || avaliacao.value >5){
+        alert(`Nota inválida. Digite de 0 a 5`);
+        img_resultado.src = '';
+    }
+    if(avaliacao.value < 0.5 ){
+        img_resultado.src ='zero.png';
+    }
+    else if(avaliacao.value < 1 ){
+        img_resultado.src ='meio.png';
+    }
+    else if(avaliacao.value < 1.5 ){
+        img_resultado.src ='um.png';
+    }
+    else if(avaliacao.value < 2){
+        img_resultado.src ='umemeio.png';
+    }
+    else if(avaliacao.value < 2.5){
+        img_resultado.src ='dois.png';
+    }
+    else if(avaliacao.value < 3){
+        img_resultado.src ='doisemeio.png';
+    }
+    else if(avaliacao.value < 3.5){
+        img_resultado.src ='tres.png';
+    }
+    else if(avaliacao.value < 4){
+        img_resultado.src ='tresemeio.png';
+    }
+    else if(avaliacao.value < 4.5){
+        img_resultado.src ='quatro.png';
+    }
+    else if(avaliacao.value < 5){
+        img_resultado.src ='quatroemeio.png';
+    }
+    else {
+        img_resultado.src ='cinco.png';
+    }
+}
+
+</script>

@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista for - q03</title>
+</head>
+<body>
+
+    <button onclick="falar()">
+        Conte de 5 em 5
+    </button>
+    
+    <div id="div_frase"></div>
+
+</body>
+</html>
+<script>
+    function falar() {
+        div_frase.innerHTML = '';
+        
+        for (var contador=0; contador <=200; contador+=5) {
+            div_frase.innerHTML += `${contador}<br>`;
+        }
+    }
+</script>

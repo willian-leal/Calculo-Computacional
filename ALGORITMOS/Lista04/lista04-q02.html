@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04 - q02</title>
+</head>
+<body>
+    <h2>Área da circunferência</h2>
+    <input placeholder="Raio" id="raio"> <br>
+    
+    <button onclick="calcular()">
+        Calcular Área
+    </button>
+
+    <div id="div_resultado"></div>
+</body>
+</html>
+<script>
+
+function calcular() {
+   var area = 3.14 * (Number(raio.value) ** 2);
+   div_resultado.innerHTML = area.toFixed(2);
+   // toFixed() arredonda o número 
+   // a quantidade de casas decimais é o que colocamos dentro
+   // ex: toFixed(2) arredonda para 2 casas decimais
+}
+
+</script>

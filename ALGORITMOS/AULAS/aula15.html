@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula14</title>
+</head>
+<body>
+
+    <h3>Esonde e mostra elementos</h3>
+
+    Há segredos aqui! Cuidado!<br>
+
+    <button onclick="mostrar()" id="b_mostrar">Ver o segredo</button>
+    <button onclick="esconder()" id="b_esconder" style="display: none;">Esconder o segredo</button>
+    
+    
+    <br>
+    <span id="span_segredo" style="display: none">
+        Você é senhor do que cala e escravo do que fala!
+    </span>
+</body>
+</html>
+<script>
+    function mostrar(){
+        span_segredo.style.display='block';
+        b_mostrar.style.display='none';
+        b_esconder.style.display='block';
+    }
+    function esconder(){
+        span_segredo.style.display='none';
+        b_mostrar.style.display='block';
+        b_esconder.style.display='none';
+
+    }
+</script>

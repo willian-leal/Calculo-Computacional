@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista09-q02</title>
+</head>
+<body>
+    
+    <select name="" id="forma_pag">
+        <option value="dinheiro">Dinheiro</option>
+        <option value="debito">Cartão de Débito</option>
+        <option value="credito">Cartão de Crédito</option>
+        <option value="boleto">Boleto</option>
+    </select>
+    <button onclick="analisar()">Analisar compra</button>
+</body>
+</html>
+<script>
+
+    function analisar(){
+        if(forma_pag.value == 'dinheiro' || forma_pag.value =='debito'){
+            alert('Você terá que pagar à vista');
+        }
+        else{
+            alert('Pagamento poderá ser parcelado');
+        }
+    }
+
+</script>

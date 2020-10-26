@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista boolean - q01</title>
+</head>
+<body>
+    
+    <input placeholder="Seu login" id="login"> <br>
+    <input placeholder="Sua senha" id="senha"> <br>
+    <button onclick="entrar()">Entrar</button>
+
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function entrar() {
+
+        // variáveis booleanas
+        var login_ok = login.value == 'aidimin';
+        var senha_ok = senha.value == 'seinha';
+
+        var frase = '';
+        var cor;
+
+        // if (login_ok==true && senha_ok==true)
+        // pode ser 'resumido' para if (login_ok && senha_ok)
+        // ou seja, booleanos num 'if' é o mesmo que perguntar se eles são true
+        if (login_ok && senha_ok) {
+            frase = 'Usuário autenticado com sucesso!';
+            cor = 'blue';
+        } else {
+            cor = 'red';
+            if (!login_ok) { // !login_ok => "login_ok NÃO é true?"
+                frase = 'Seu login está inválido! <br>';
+            }
+            if (!senha_ok) { // !senha_ok => "senha_ok NÃO é true?"
+                frase += 'Sua senha está inválida!';
+                if (login_ok) {
+                    alert('Entre em contato com o suporte para recuperar sua senha');
+                }
+            }
+            // !login_ok => é o mesmo que: login_ok == false
+            // !login_ok => é o mesmo que: login_ok != true
+        }
+
+        resultado.style.color = cor;
+        resultado.innerHTML = frase;
+    }
+</script>

@@ -1,0 +1,34 @@
+
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista09-q03</title>
+</head>
+<body>
+
+    Você já clicou <b id="b_vezes">0</b> vezes
+
+    <button onclick="contar()">
+        Clica nimin
+    </button><br>
+    <div id="div_mensagem"></div>
+    
+</body>
+</html>
+<script>
+
+function contar() {
+   
+    var vezes = Number(b_vezes.innerHTML);
+    vezes++;
+    b_vezes.innerHTML = vezes;
+
+    if(vezes == 3 || vezes == 4 || vezes ==7 || vezes == 10){
+        alert(`Você ja clicou ${vezes} vezes e Juliana gosta desse número!`)
+    }
+    
+}
+</script>

@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista for - q01</title>
+</head>
+<body>
+
+    <input placeholder="Informe uma frase" id="frase"><br>
+    <input placeholder="Informe uma quantidade" id="qtd"><br>
+
+    <button onclick="falar()">
+        Diga algo sobre a quarentena
+    </button>
+    
+    <div id="div_frase"></div>
+
+</body>
+</html>
+<script>
+    function falar() {
+        div_frase.innerHTML = '';
+        var quantidade = qtd.value;
+        for (var contador=1; contador <=quantidade; contador++) {
+            div_frase.innerHTML += `${contador}. ${frase.value} <br>`;
+        }
+    }
+</script>

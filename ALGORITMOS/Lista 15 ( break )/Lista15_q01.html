@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista for - q02</title>
+</head>
+<body>
+
+    <input placeholder="Iforme seu número da sorte" id="sorte">
+
+    <button onclick="falar()">
+        Testar minha sorte
+    </button>
+    
+    <div id="div_frase"></div>
+
+</body>
+</html>
+<script>
+    function falar() {
+      var numero_sorte = Number(sorte.value);
+
+      for (var sorteio = 1; sorteio <=20; sorteio++){
+          var numero_sorteado = parseInt(Math.random()*101);
+
+          if (numero_sorteado == numero_sorte){
+              break;
+          }
+      }
+        if(sorteio <=20){
+            div_frase.innerHTML = `Muito bem, você é uma pessoa de sorte! Seu número saiu no ${sorteio}º sorteio`;
+        }else{
+            div_frase.innerHTML = `É, você não tem muita sorte em sorteios, pelo visto`;
+        }
+       
+    }
+</script>

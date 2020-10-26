@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista boolean - q01</title>
+</head>
+<body>
+    
+    <input placeholder="Sua nota" id="nota"> <br>
+    <input placeholder="Sua frequência" id="frequencia"> <br>
+    
+    <button onclick="analisar()">Avaliar</button>
+
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function analisar() {
+
+        // variáveis booleanas
+        var aprovado_nota = nota.value > 6 ;
+        var aprovado_frequencia = frequencia.value > 75 ;
+        
+        var frase = '';
+
+        if (aprovado_nota && aprovado_frequencia) {
+        frase = 'Parabéns, aprovado(a)!';
+            
+        } if(!aprovado_nota){
+            frase = 'Reprovado(a) por nota!<br>';
+
+        } if(!aprovado_frequencia){
+            frase += 'Reprovado(a) por frequência!'
+        }
+
+        resultado.innerHTML = frase;
+    }
+</script>

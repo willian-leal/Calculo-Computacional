@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista10-q03</title>
+</head>
+<body>
+
+    <button onclick="jogar()">Jogar</button>
+    
+    <img id="img_resultado" style="height: 200px;">    
+</body>
+</html>
+<script>
+
+    var numero;
+    function jogar(){
+        numero = parseInt(Math.random() * 3); 
+        resultado()
+   }
+   function resultado(){
+       img_resultado.src = '';
+       
+       if(numero >=2){
+        img_resultado.src ='pedra.jpeg';
+       }
+       else if(numero >=1){
+        img_resultado.src ='papel.jpeg';
+       }
+       else{
+        img_resultado.src ='tesoura.jpeg';
+       }
+   }
+
+
+</script>

@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista10-q07</title>
+</head>
+<body>
+
+    <button onclick="jogar()">Jogar dado</button>
+    
+    <img id="img_resultado" style="height: 150px;">    
+</body>
+</html>
+<script>
+
+    var numero;
+    function jogar(){
+        numero = parseInt(Math.random() * 6); 
+        resultado()
+   }
+   function resultado(){
+       img_resultado.src = '';
+       
+       if(numero >=5){
+        img_resultado.src ='seis.jpg';
+       }
+       else if(numero >=4){
+        img_resultado.src ='cinco.jpg';
+       }
+       else if(numero >=3){
+        img_resultado.src ='quatro.jpg';
+       }
+       else if(numero >=2){
+        img_resultado.src ='tres.jpg';
+       }
+       else if(numero >=1){
+           img_resultado.src = 'dois.jpg';
+       }
+       else{
+        img_resultado.src = 'um.jpg';
+       }
+   }
+
+
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista05-q07</title>
+</head>
+<body>
+    
+<input placeholder="Informe a renda familiar" id="renda">
+
+<input placeholder="Informe o valor da parcela" id="parcela">
+
+<button onclick="calcular()">Verificar financiamento</button>
+<br>
+<div id="div_resultado"></div>
+<p id="complemento" style="color:red;"></p>
+
+</body>
+</html>
+<script>
+
+function calcular(){
+
+    var financiamento = Number(parcela.value) / Number(renda.value)* 100;
+    div_resultado.innerHTML=`Valor do financiamento ${financiamento}%`;
+    if(financiamento > 30){
+        complemento.innerHTML = '<b>Será necessário complementar a renda familiar</b>';
+    }
+}
+</script>

@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista for - q01</title>
+</head>
+<body>
+
+    <input placeholder="Quantas xícaras de café ja bebeu?" id="qtd"><br>
+
+    <button onclick="falar()">
+        Ver quantidade
+    </button><br>
+    
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+<script>
+    function falar() {
+        div_resultado.innerHTML = '';
+        var quantidade = qtd.value;
+        for (var contador=1; contador <=quantidade; contador++) {
+            div_resultado.innerHTML += '<img src="leite.jfif"; style="width: 100px; right: 100px;"><img src="cafe.jpg"; style="width: 100px; right: 100px;"><img src="cafe.jpg"; style="width: 100px; right: 100px;">'; 
+        }
+    }
+</script>

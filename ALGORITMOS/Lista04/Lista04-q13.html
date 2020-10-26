@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Porções de pão frances: <span id="s_pao">0</span> <br>
+    <br>
+    Porções de carne bovina: <span id="s_bovina">0</span><br>
+    <br>
+    Porções de carne de soja: <span id="s_soja">0</span><br>
+    <br>
+    Porções de arroz com feijão: <span id="s_arroz">0</span><br>
+    <br>
+    <b>Total de calorias: <span id="s_caloria">0</span></b>
+    <br>
+    <br>
+    <button onclick="pão()">Comer Pão Frances</button>
+    <button onclick="bovina()">Comer Carne Bovina</button>
+    <button onclick="soja()">Comer Carne de Soja</button>
+    <button onclick="arroz()">Comer Arroz com Feijão</button>
+    
+</body>
+</html>
+<script>
+
+    function pão(){
+        var vezes = Number(s_pao.innerHTML);
+        vezes++;
+        s_pao.innerHTML = vezes;
+        var calorias = Number(s_caloria.innerHTML);
+        calorias += 50;
+        s_caloria.innerHTML = calorias;
+    }
+    function bovina(){
+        var vezes = Number(s_bovina.innerHTML);
+        vezes++;
+        s_bovina.innerHTML = vezes;
+        var calorias = Number(s_caloria.innerHTML);
+        calorias += 100;
+        s_caloria.innerHTML = calorias;
+    }
+    function soja(){
+        var vezes = Number(s_soja.innerHTML);
+        vezes++;
+        s_soja.innerHTML = vezes;
+        var calorias = Number(s_caloria.innerHTML);
+        calorias += 30;
+        s_caloria.innerHTML = calorias;
+    }
+    function arroz(){
+        var vezes = Number(s_arroz.innerHTML);
+        vezes++;
+        s_arroz.innerHTML = vezes;
+        var calorias = Number(s_caloria.innerHTML);
+        calorias += 120;
+        s_caloria.innerHTML = calorias;
+    }
+
+</script>
